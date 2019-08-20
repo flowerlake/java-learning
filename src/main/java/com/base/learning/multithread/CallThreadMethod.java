@@ -1,16 +1,16 @@
 package com.base.learning.multithread;
 
-import static java.util.Arrays.asList;
-
-import java.util.*;
+import java.util.Date;
+import java.util.List;
 import java.util.concurrent.*;
 
-import static com.sun.xml.internal.ws.client.ContentNegotiation.none;
+import static java.util.Arrays.asList;
 
 public class CallThreadMethod {
     /*
      * @program: java-learning
-     * @description: 使用callable、线程池executor、future来创建可以返回值的线程
+     * @description: 使用callable、线程池executor、future来创建可以返回值的线程。如果对一些场合需要线程返回的结果。
+     * 就要使用用Callable、Future、FutureTask、CompletionService这几个类。Callable只能在ExecutorService的线程池中跑，但有返回结果，也可以通过返回的Future对象查询执行状态。Future 本身也是一种设计模式，它是用来取得异步任务的结果
      * @author: flowerlake
      * @create: 2019-07-06 11:08
      * @version: 1.0

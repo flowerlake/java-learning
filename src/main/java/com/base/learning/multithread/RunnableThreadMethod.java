@@ -59,6 +59,7 @@ class TestMain2 {
 
 
         try {
+            // 主线程需要等待子线程执行完成之后再结束，这个时候就要用到join()方法了
             thread1.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
