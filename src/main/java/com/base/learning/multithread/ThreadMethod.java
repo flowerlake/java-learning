@@ -27,10 +27,7 @@ class ThreadMethod extends Thread {
             e.printStackTrace();
         }
     }
-}
 
-
-class TestMain1 {
     public static void main(String[] args) {
 
         // 这里就起了两个线程，线程的代码顺序和线程的执行顺序无关
@@ -45,6 +42,7 @@ class TestMain1 {
 
     }
 }
+
 
 /*
 * 学习文章：https://blog.csdn.net/evankaka/article/details/44153709

@@ -18,11 +18,11 @@ class RunnableThreadMethod implements Runnable {
     }
 
     public void run() {
-        System.out.println(Thread.currentThread().getName()+"运行开始");
+        System.out.println(Thread.currentThread().getName() + "运行开始");
         for (int i = 0; i < 10; i++) {
             System.out.println(name + ":" + i);
 
-            if (i==8 && Thread.currentThread().getName().equals("Thread-0")){
+            if (i == 8 && Thread.currentThread().getName().equals("Thread-0")) {
                 System.out.println("yield start");
                 // yield只是从程序上控制线程的运行状态，即将其在程序层面上转为可运行状态也就是就绪状态，但是硬件层面CPU调度还是有
                 // 可能将同时处于可运行状态中的该线程拿出来跑。
@@ -34,15 +34,12 @@ class RunnableThreadMethod implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName()+"运行结束");
+        System.out.println(Thread.currentThread().getName() + "运行结束");
     }
-}
 
-
-class TestMain2 {
     public static void main(String[] args) {
 
-        System.out.println(Thread.currentThread().getName()+"运行开始");
+        System.out.println(Thread.currentThread().getName() + "运行开始");
 
         // Thread2类通过实现Runnable接口，使得该类有了多线程类的特征。run（）方法是多线程程序的一个约定。
         // 所有的多线程代码都在run方法里面。Thread类实际上也是实现了Runnable接口的类。
@@ -65,6 +62,6 @@ class TestMain2 {
             e.printStackTrace();
         }
 
-        System.out.println(Thread.currentThread().getName()+"运行结束");
+        System.out.println(Thread.currentThread().getName() + "运行结束");
     }
 }
