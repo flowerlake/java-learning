@@ -22,11 +22,16 @@ class RunnableThreadMethod implements Runnable {
         for (int i = 0; i < 10; i++) {
             System.out.println(name + ":" + i);
 
-            if (i == 8 && Thread.currentThread().getName().equals("Thread-0")) {
-                System.out.println("yield start");
+            if (i == 8 ) {
+//                System.out.println("yield start");
                 // yield只是从程序上控制线程的运行状态，即将其在程序层面上转为可运行状态也就是就绪状态，但是硬件层面CPU调度还是有
                 // 可能将同时处于可运行状态中的该线程拿出来跑。
-                Thread.yield();
+//                Thread.yield();
+//                try {
+//                    Thread.sleep(3000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
         try {
